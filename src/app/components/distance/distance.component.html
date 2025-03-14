@@ -1,0 +1,29 @@
+<div class="distance-container">
+  <h3>Distance between exhibits</h3>
+  <div class="distance">
+    <form>
+      <b>Select your starting point</b>
+      <select id="startPoint" (change)="onStartPointChange($event)">
+        <option *ngFor="let location of locations">{{ location }}</option>
+      </select>
+      <b>Select your ending point</b>
+      <select id="endPoint" (change)="onEndPointChange($event)">
+        <option *ngFor="let location of locations">{{ location }}</option>
+      </select>
+      <br /><br />
+      <p>
+        Your walking distance is:
+        <input
+          type="text"
+          id="distance"
+          size="20"
+          [value]="distance"
+          readonly
+        />
+        <br />
+        and estimated time is:
+        <input type="text" id="time" size="20" [value]="time" readonly />
+      </p>
+    </form>
+  </div>
+</div>

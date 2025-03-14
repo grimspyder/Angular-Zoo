@@ -1,0 +1,112 @@
+.game-container {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  width: 300px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#startGame {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #f1c40f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#infoContainer {
+  position: relative;
+  top: 7%;
+  left: 42%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: larger;
+  color: #f54409;
+  font-weight: bold;
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #f54409;
+}
+
+#membership-form {
+  position: absolute;
+  top: 200px;
+  right: 10px;
+  width: 350px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#membershipForm {
+  width: 300px;
+  padding: 20px;
+  background: rgb(169, 167, 167);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#closePopup {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #f54409;
+  cursor: pointer;
+}
+
+area {
+  cursor: pointer;
+}
+
+#animals {
+  list-style: inside square;
+  font-size: 20px;
+  background: white;
+  width: 500px;
+  margin: auto;
+  padding: 0;
+  box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+#animals li {
+  border-bottom: 1px solid #efefef;
+  padding: 20px;
+}
+
+#animals li:last-child {
+  border-bottom: 0;
+}
+
+#animals li:hover {
+  background: #f9f9f9;
+}
+
+#animals {
+  cursor: pointer;
+}
+
+#closeAdoptPopup {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #f54409;
+  cursor: pointer;
+}
+
+#adopt-container {
+  position: absolute;
+  top: 500px;
+  right: 10px;
+  width: 350px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

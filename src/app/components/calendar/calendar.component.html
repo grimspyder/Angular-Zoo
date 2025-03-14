@@ -1,0 +1,54 @@
+<div class="calendar-container">
+  <h3>Event Calendar</h3>
+  <div class="container">
+    <div class="header">
+      <div id="month">{{ monthBanner }}</div>
+      <div>
+        <button id="btnBack" (click)="goToPrevMonth()">
+          <i class="fa fa-angle-left"></i>
+        </button>
+        <button id="btnNext" (click)="goToNextMonth()">
+          <i class="fa fa-angle-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="weekdays">
+      <div *ngFor="let day of weekdays">{{ day.slice(0, 3) }}</div>
+    </div>
+    <div id="calendar">
+      <div
+        *ngFor="let calendarDay of calendarDays"
+        class="day"
+        [class.plain]="calendarDay.isPlain"
+        [id]="calendarDay.isCurrentDay ? 'currentDay' : ''"
+        (click)="!calendarDay.isPlain && showModal(calendarDay.dateText)"
+      >
+        {{ calendarDay.day !== 0 ? calendarDay.day : "" }}
+        <div *ngIf="calendarDay.event" class="event">
+          {{ calendarDay.event }}
+        </div>
+        <div *ngIf="calendarDay.holiday" class="event holiday">
+          {{ calendarDay.holiday }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal" *ngIf="isModalVisible" (click)="closeModal()"></div>
+  <div id="addEvent" *ngIf="isAddEventFormVisible">
+    <h2>Add Event</h2>
+    <input
+      type="text"
+      [(ngModel)]="newEventTitle"
+      placeholder="Event Title"
+      [class.error]="showError"
+    />
+    <button id="btnSave" (click)="saveEvent()">Save</button>
+    <button class="btnClose" (click)="closeModal()">Close</button>
+  </div>
+  <div id="viewEvent" *ngIf="isViewEventFormVisible">
+    <h2>Event</h2>
+    <p id="eventText">{{ eventText }}</p>
+    <button id="btnDelete" (click)="deleteEvent()">Delete</button>
+    <button class="btnClose" (click)="closeModal()">Close</button>
+  </div>
+</div>

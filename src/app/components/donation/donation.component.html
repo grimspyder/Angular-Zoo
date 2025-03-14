@@ -1,0 +1,66 @@
+<div class="donation-container">
+  <h3>Donations</h3>
+  <p>
+    Your donation will help us continue to provide the best care for our
+    animals.
+  </p>
+  <form (submit)="onSubmit($event)">
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="email" name="email" required />
+
+    <p>Suggested Donation Amounts</p>
+    <input
+      type="radio"
+      id="5dollars"
+      name="donation"
+      value="5"
+      [(ngModel)]="selectedAmount"
+    />
+    <label for="5dollars">$5</label>
+    <p></p>
+    <input
+      type="radio"
+      id="10dollars"
+      name="donation"
+      value="10"
+      [(ngModel)]="selectedAmount"
+    />
+    <label for="10dollars">$10</label>
+    <p></p>
+    <input
+      type="radio"
+      id="20dollars"
+      name="donation"
+      value="20"
+      [(ngModel)]="selectedAmount"
+    />
+    <label for="20dollars">$20</label>
+    <br />
+    <label for="custom">Please specify amount</label>
+    <input
+      type="text"
+      id="custom"
+      name="customAmount"
+      [(ngModel)]="customAmount"
+      placeholder="Custom Amount"
+    />
+    <br />
+    <input type="submit" id="donateButton" value="Donate" />
+  </form>
+
+  <div
+    *ngIf="showMessage"
+    [ngStyle]="{
+      position: 'fixed',
+      top: '20px',
+      right: '20px',
+      padding: '10px',
+      backgroundColor: isSuccess ? 'green' : 'red',
+      color: 'white',
+      borderRadius: '5px',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)'
+    }"
+  >
+    {{ messageText }}
+  </div>
+</div>

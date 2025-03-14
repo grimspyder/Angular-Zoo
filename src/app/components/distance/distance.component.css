@@ -1,0 +1,14 @@
+.distance-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 20px;
+  text-align: center;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.distance-container h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}

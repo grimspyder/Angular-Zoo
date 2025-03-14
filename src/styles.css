@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+h1,
+h2 {
+  text-align: center;
+  margin: 50px 0;
+}
+
+h2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: underline;
+}
+
+[role="main"] {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.maparea {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-container {
+  width: 80%;
+  margin: auto;
+  background: #0000;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  padding: 2rem;
+  box-shadow: 0 0 0.4rem 0.4rem rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card :hover {
+  text-align: center;
+  transform: scale(1.5);
+  transition: all 0.5s;
+  box-shadow: 0 0 0.4rem 0.4rem rgba(0, 0, 0, 0.2);
+  background-color: rgb(248, 247, 247);
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 0.9em;
+}
+
+.search-form {
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+input#search {
+  text-align: center;
+  border: 10px solid #a9b19ea2;
+  width: 120%;
+  left: -10%;
+  position: relative;
+  font-size: 40px;
+}
+
+.search-note {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+#zoo-timeline {
+  width: 80%;
+  margin: 0 auto;
+}

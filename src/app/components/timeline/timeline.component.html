@@ -1,0 +1,31 @@
+<div class="time-line">
+  <div id="zoo-timeline">
+    <div class="timeline-container">
+      <div class="timeline">
+        <h3 id="timeline-h3">ZOO EXHIBIT TIMELINE</h3>
+        <div class="timeline-wrapper">
+          <ul class="timeline-items">
+            <li
+              *ngFor="let item of timelineItems; let i = index"
+              [attr.date-date]="item.date"
+            >
+              <span class="title">{{ item.title }}</span>
+              <div
+                class="data"
+                [class.show]="activeTimelineItemIndex === i"
+                (click)="toggleTimelineItem(i, $event)"
+              >
+                <h3>{{ item.title.split(" ")[0] }}</h3>
+                <small>{{ item.date }}</small>
+                <p>{{ item.description }}</p>
+                <span class="close" (click)="closeTimelineItem($event)"
+                  >Click To Close</span
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

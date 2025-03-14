@@ -1,0 +1,68 @@
+<header>
+  <h1>Welcome to the NTC Zoo</h1>
+</header>
+<main>
+  <section>
+    <h2>Where the animals are more than just friends; they're family.</h2>
+    <br />
+  </section>
+
+  <app-donation></app-donation>
+  <app-game></app-game>
+  <app-calendar></app-calendar>
+  <app-feedback></app-feedback>
+  <app-distance></app-distance>
+
+  <div class="image-container">
+    <img src="assets/map.jpg" usemap="#image-map" class="maparea" />
+    <map name="image-map">
+      <area
+        target="_self"
+        alt="Monkeys"
+        title="Monkeys"
+        href="https://en.wikipedia.org/wiki/Monkey"
+        coords="175,380,180,378,196,341,171,312,134,312,113,327,112,354,125,380,151,388,168,383"
+        shape="poly"
+      />
+      <area
+        target="_self"
+        alt="Lions"
+        title="Lions"
+        href="https://en.wikipedia.org/wiki/Lion"
+        coords="335,189,327,198,291,222,269,219,255,207,235,209,221,205,223,63,254,42,291,44,324,60,337,74,294,98,297,122,323,143,350,155,342,182,339,186"
+        shape="poly"
+      />
+      <area
+        target="_self"
+        alt="Penguin"
+        title="Penguin"
+        href="https://en.wikipedia.org/wiki/Penguin"
+        coords="329,354,40"
+        shape="circle"
+      />
+      <area
+        target="_self"
+        alt="Kangaroos"
+        title="Kangaroos"
+        href="https://en.wikipedia.org/wiki/Kangaroo"
+        coords="309,230,284,220,267,227,239,238,223,263,244,300,286,300,313,298,313,278,316,260"
+        shape="poly"
+      />
+      <area
+        target="_self"
+        alt="Camels"
+        title="Camels"
+        href="https://en.wikipedia.org/wiki/Camel"
+        coords="420,171,431,200,455,210,477,212,474,34,437,38,414,50,369,70,328,89,293,101,298,127,326,143,353,154,369,157,405,158"
+        shape="poly"
+      />
+    </map>
+  </div>
+
+  <app-timeline></app-timeline>
+</main>
+<footer>
+  <p>&copy; John Soler</p>
+</footer>
+
+<router-outlet></router-outlet>
